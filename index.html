@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="Style.css">
+  <title>Historia de la Inteligencia Artificial</title>
+</head>
+<body>
+
+  <header>
+    <h1>Evolución de la Inteligencia Artificial</h1>
+    <p>Un viaje desde Alan Turing hasta ChatGPT</p>
+  </header>
+
+  <main class="timeline">
+
+    <div class="tarjeta">
+      <div class="content" onclick="this.querySelector('.extra-content').classList.toggle('show')">
+        <h2>1843 - La Primera Programadora</h2>
+        <p><strong>Ada Lovelace</strong> escribe el primer algoritmo diseñado para ser procesado por una máquina. Ella imaginó que las computadoras podrían ir más allá de los simples números.</p>
+        <span class="info-extra">¡Vio el potencial de la IA cien años antes de que existiera!</span><br>
+
+        <div class="contenedor-foto">
+          <img src="/img/Ada_Lovelace.jpg" alt="Ada Lovelace">
+        </div>
+
+        <div class="extra-content">
+          <span class="info-extra">
+            Computer History Museum: The Babbage Engine - Ada Lovelace <br>
+            Scientific American: Ada Lovelace, the First Tech Visionary
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <div class="content" onclick="this.querySelector('.extra-content').classList.toggle('show')">
+        <h2>1950 - El Test de Turing</h2>
+        <p><strong>Alan Turing</strong> publica su famoso test en el artículo "Computing Machinery and Intelligence". Planteó la pregunta: "¿Pueden pensar las máquinas?"</p>
+        <span class="info-extra">Dato: Es considerado el padre de la computación moderna.</span><br>
+
+        <div class="contenedor-foto">
+          <img src="/img/images.jpg" alt="Alan Turing">
+        </div>
+
+        <div class="extra-content">
+          <span class="info-extra">
+            Stanford Encyclopedia of Philosophy: The Turing Test <br>
+            Britannica: Alan Turing and AI
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <div class="content" onclick="this.querySelector('.extra-content').classList.toggle('show')">
+        <h2>1956 - Conferencia de Dartmouth</h2>
+        <p><strong>John McCarthy</strong> y otros científicos acuñan oficialmente el término "Inteligencia Artificial" durante este evento histórico.</p>
+        <span class="info-extra">Fue un taller de 8 semanas que cambió el mundo.</span><br>
+
+        <div class="contenedor-foto">
+          <img src="/img/Conferencia de Dartmouth.jpg" alt="Conferencia de Dartmouth">
+        </div>
+
+        <div class="extra-content">
+          <span class="info-extra">
+            Dartmouth University Archives: The Dartmouth Summer Research Project
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <div class="content" onclick="this.querySelector('.extra-content').classList.toggle('show')">
+        <h2>1966 - ELIZA</h2>
+        <p>Se crea el primer programa de procesamiento de lenguaje natural que simulaba una conversación humana. Fue el ancestro de los actuales chatbots.</p>
+        <span class="info-extra">Simulaba ser una psicóloga y muchos creían que era real.</span><br>
+
+        <div class="contenedor-foto">
+          <img src="/img/ELIZA.jpg" alt="ELIZA">
+        </div>
+
+        <div class="extra-content">
+          <span class="info-extra">
+            MIT Museum: ELIZA - The first chatbot
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <div class="content" onclick="this.querySelector('.extra-content').classList.toggle('show')">
+        <h2>1997 - Deep Blue</h2>
+        <p>La supercomputadora de IBM vence al campeón mundial <strong>Garry Kasparov</strong>. Fue la primera vez que la IA superó al humano en estrategia pura.</p>
+        <span class="info-extra">La máquina podía calcular 200 millones de posiciones por segundo.</span><br>
+
+        <div class="contenedor-foto">
+          <img src="/img/Deep Blue.jpg" alt="Deep Blue">
+        </div>
+
+        <div class="extra-content">
+          <span class="info-extra">
+            IBM Newsroom: Deep Blue - 20 years later
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <div class="content" onclick="this.querySelector('.extra-content').classList.toggle('show')">
+        <h2>2016 - AlphaGo</h2>
+        <p>La IA de DeepMind vence a Lee Sedol en <strong>Go</strong>, un juego mucho más complejo que el ajedrez, usando aprendizaje profundo.</p>
+        <span class="info-extra">Se creía que esto no pasaría hasta dentro de 10 años más.</span><br>
+
+        <div class="contenedor-foto">
+          <img src="/img/AlphaGo.jpg" alt="AlphaGo">
+        </div>
+
+        <div class="extra-content">
+          <span class="info-extra">
+            Google DeepMind: The story of AlphaGo
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <div class="content" onclick="this.querySelector('.extra-content').classList.toggle('show')">
+        <h2>Hoy - La Era de los LLM</h2>
+        <p>Modelos como <strong>GPT-4</strong> y otros sistemas generativos permiten crear texto, imágenes y código con una naturalidad asombrosa.</p>
+        <span class="info-extra">¡Es la tecnología que estamos usando para este código!</span><br>
+
+        <div class="contenedor-foto">
+          <img src="/img/La Era de los LLM.jpg" alt="Era de los LLM">
+        </div>
+
+        <div class="extra-content">
+          <span class="info-extra">
+            OpenAI Blog: GPT-4 Research
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    // Animación al hacer scroll
+    const tarjetas = document.querySelectorAll('.tarjeta');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.2 });
+
+    tarjetas.forEach(tarjeta => {
+      tarjeta.style.opacity = '0';
+      tarjeta.style.transform = 'translateY(50px)';
+      tarjeta.style.transition = 'all 0.8s ease-out';
+      observer.observe(tarjeta);
+    });
+  </script>
+
+</body>
+</html>
